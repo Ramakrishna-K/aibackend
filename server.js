@@ -15,13 +15,21 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000", // React frontend
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin: "http://localhost:3000", // React frontend
+    origin: [
+      "http://localhost:3000",
+      "https://aichat-frontend-blue.vercel.app"
+    ],
     credentials: true,
   })
 );
-
 app.use(cookieParser());
 
 // Routes
