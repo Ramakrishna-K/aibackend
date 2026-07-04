@@ -9,6 +9,7 @@ import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
+
 connectDB();
 const app = express();
 
